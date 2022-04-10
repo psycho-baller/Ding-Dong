@@ -5,52 +5,65 @@
   font-size: 2em;
   color: #ffeead;
 }
+
 .container{
   display: grid;
   /*think of grid as an L*/
+
   grid-template-columns: auto auto auto;
   grid-auto-rows: auto;
-  grid-gap: 1px;
+  grid-gap: 0.3rem;
   grid-template-areas:
   "h h h"
   "m1 m2 m3"
   "m8 c m4"
   "m7 m6 m5"
   "f f f";
+  --stagger-delay: 100ms;
+
 }
 img{
   max-height: 20vw;
   object-fit: contain;
-
 }
 .header{
   grid-area: h;
 }
+
 .m1{
+  animation-delay: calc(1 * 100ms);
   grid-area: m1;
 }
 .m2{
+  animation-delay: calc(2 * 100ms);
   grid-area: m2;
 }
 .m3{
+  animation-delay: calc(3 * 100ms);
   grid-area: m3;
 }
 .m4{
+  animation-delay: calc(4 * 100ms);
   grid-area: m4;
 }
 .m5{
+  animation-delay: calc(5 * 100ms);
   grid-area: m5;
 }
 .m6{
+  animation-delay: calc(6 * 100ms);
   grid-area: m6;
 }
 .m7{
+  animation-delay: calc(7 * 100ms);
   grid-area: m7;
 }
 .m8{
+  animation-delay: calc(8 * 100ms);
   grid-area: m8;
 }
 .content{
+  animation-delay: calc(9 * 100ms);
   grid-area: c;
   grid-template-columns: auto fit-content(1fr) auto;
 }
@@ -58,4 +71,23 @@ img{
   grid-area: f;
 }
 
-
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+    filter: hue-rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+}
+.card{
+  animation: cardEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+}
+.card:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0 0.175em 0.5em;
+  transform: translateY(-3px) scale(1.1);
+}

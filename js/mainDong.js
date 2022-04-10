@@ -1,5 +1,5 @@
 const fs = require('fs');
-
+import fs from 'fs';
 const usedDongIDs = new Set();
 const dongData = JSON.parse(fs.readFileSync('data\\ding_dong.json', 'utf8'));
 
@@ -12,7 +12,7 @@ function showDongJoke() {
   if (!usedDongIDs.has(randomDong.id)) {
     usedDongIDs.add(randomDong.id);
     const dongJoke = `
-    Knock knock!<br>
+    Ding Dong!<br>
     Who's there?<br>
     ${randomDong.whos_there}<br>
     ${randomDong.whos_there} who?<br>

@@ -1,5 +1,5 @@
 const fs = require('fs');
-
+import fs from 'fs';
 const usedKnockIDs = new Set();
 const knockData = JSON.parse(fs.readFileSync('data\\knock_knock.json', 'utf8'));
 
