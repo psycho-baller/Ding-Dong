@@ -7,7 +7,7 @@
 }
 .container{
   display: grid;
-  //think of grid as an L
+  /*think of grid as an L*/
   grid-template-columns: auto auto auto;
   grid-auto-rows: auto;
   grid-gap: 1px;
