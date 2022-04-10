@@ -1,0 +1,61 @@
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffeead;
+}
+.container{
+  display: grid;
+  //think of grid as an L
+  grid-template-columns: auto auto auto;
+  grid-auto-rows: auto;
+  grid-gap: 1px;
+  grid-template-areas:
+  "h h h"
+  "m1 m2 m3"
+  "m8 c m4"
+  "m7 m6 m5"
+  "f f f";
+}
+img{
+  max-height: 20vw;
+  object-fit: contain;
+
+}
+.header{
+  grid-area: h;
+}
+.m1{
+  grid-area: m1;
+}
+.m2{
+  grid-area: m2;
+}
+.m3{
+  grid-area: m3;
+}
+.m4{
+  grid-area: m4;
+}
+.m5{
+  grid-area: m5;
+}
+.m6{
+  grid-area: m6;
+}
+.m7{
+  grid-area: m7;
+}
+.m8{
+  grid-area: m8;
+}
+.content{
+  grid-area: c;
+  grid-template-columns: auto fit-content(1fr) auto;
+}
+.footer{
+  grid-area: f;
+}
+
+

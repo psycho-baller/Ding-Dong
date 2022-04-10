@@ -4,6 +4,7 @@ html {
   line-height: 1.4;
 }
 
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -84,26 +85,7 @@ textarea {
   margin: 4px 2px;
   cursor: pointer;
 }
-/*.link {
-  transform: translateX(-0.75em);
-  transititon: transform 200ms;
-}
-.link::before {
-  content: "#";
-  display: inline-block;
-  width: 0.75em;
-  color: #888888;
-  opacity: 0;
-  transition: opacity 200ms;
-}
 
-.link:hover {
-  transform: none;
-}
-
-.link:hover::before {
-  opacity: 1;
-}*/
 a {
   background-image: linear-gradient(
     to right,
@@ -325,4 +307,22 @@ body {
     page-break-after: avoid;
   }
 }
+body {
+  color: #222;
+  background: #fff;
+  font: 100% system-ui;
+}
+a {
+  color: #0033cc;
+}
 
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #eee;
+    background: #121212;
+  }
+
+  body a {
+    color: #809fff;
+  }
+}
