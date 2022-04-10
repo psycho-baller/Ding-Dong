@@ -1,6 +1,6 @@
 const fs = require('fs');
 const usedDongIDs = new Set();
-const dongData = JSON.parse(fs.readFileSync('data\\ding_dong.json', 'utf8'));
+const dongData = JSON.parse(fs.readFileSync('data/ding_dong.json', 'utf8'));
 
 // get reference to button
 const dongJoke = document.getElementById("getDong");
