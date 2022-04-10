@@ -1,5 +1,4 @@
-// const fs = require('fs');
-import fs from 'fs';
+const fs = require('fs');
 const usedDongIDs = new Set();
 const dongData = JSON.parse(fs.readFileSync('data\\ding_dong.json', 'utf8'));
 
