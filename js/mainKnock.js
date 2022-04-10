@@ -1,6 +1,6 @@
 const fs = require('fs');
 const usedKnockIDs = new Set();
-const knockData = JSON.parse(fs.readFileSync('data\\knock_knock.json', 'utf8'));
+const knockData = JSON.parse(fs.readFileSync('data/knock_knock.json', 'utf8'));
 
 // get reference to button
 const knockJoke = document.getElementById("getKnock");
