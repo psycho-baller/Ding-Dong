@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Knock Knock Hub</title>
+</head>
+<body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="../js/plugins.js"></script>
+<script src="../js/mainKnock.js"></script>
+<ul>
+    <li>
+        <button class="button buttonDingDong">
+            <a href="KnockKnock.html">Back to Knock Knock hub</a>
+          </button>
+      </li>
+      <li>
+        <label for="whosThere">Who's there: </label>
+        <input type="text" id="whosThere">
+        <br>
+        <!-- TODO: figure out how u can show the inputed text when asking for the 'who' -->
+        <label for="who">Who?: </label>
+        <input type="text" id="who">
+        <br>
+    <button type="button" id="addKnock" onclick="addKnockJoke()">add a knock-knock joke</button>
+</li>
+</ul>
+
+<p id="addKnockStatus"></p>
+
+</body>
+</html>

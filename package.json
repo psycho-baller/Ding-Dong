@@ -5,6 +5,7 @@
   "keywords": "",
   "license": "",
   "author": "",
+
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",

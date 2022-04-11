@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   font-size: 2em;
-  color: #ffeead;
+  color:  hsl(166, 100%, 50%);
 }
 
 .container{
@@ -93,4 +93,10 @@
 .card:hover {
   box-shadow: rgba(2, 8, 20, 0.1) 0 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0 0.175em 0.5em;
   transform: translateY(-3px) scale(1.1);
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+.button:hover{
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
 }

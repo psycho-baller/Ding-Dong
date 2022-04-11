@@ -1,5 +1,3 @@
-// const fs = require('fs');
-// const dongData = JSON.parse(fs.readFileSync('data\\ding_dong.json', 'utf8'));
 const usedDongIDs = new Set();
 
 // get reference to button
@@ -23,5 +21,30 @@ function showDongJoke() {
     } else{
       showDongJoke();
     }
+  });
+}
+function addDongJoke() {
+  const dongJoke = `
+  Ding Dong!<br>
+  Who's there?<br>
+  ${document.getElementById("whosThere").value}<br>
+  ${document.getElementById("whosThere").value} who?<br>
+  ${document.getElementById("who").value}`;
+  document.getElementById("addDongStatus").innerHTML = dongJoke;
+
+  $.getJSON('..\\data\\ding_dong.json', function (dongData) {
+    dongData.push({
+      id: (dongData.length + 1).toString(),
+      whos_there: document.getElementById("whosThere").value,
+      who: document.getElementById("who").value
+    });
+    console.log(dongData);
+    // fs.writeFile('..\\data\\knock_knock.json', JSON.stringify(dongData), err => {
+    //   if (err) {
+    //     console.log("Error writing file", err)
+    //   } else {
+    //     console.log('JSON data is written to the file successfully')
+    //   }
+    // });
   });
 }
