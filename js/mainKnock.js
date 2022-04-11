@@ -25,18 +25,3 @@ function showKnockJoke() {
   });
 }
 
-
-
-// Perform other work here ...
-
-// $.getJSON("test.json", function(json) {
-//   console.log(json); // this will show the info it in firebug console
-// });
-
-// // get reference to button
-// var dark = document.getElementById("darkMode");
-// // add event listener for the button, for action "click"
-// dark.addEventListener("click", darkMode);
-// function darkMode() {
-//   let element = document.body;
-//   element.classList.toggle("dark-mode");
