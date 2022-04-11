@@ -7,7 +7,7 @@ const dongJoke = document.getElementById("getDong");
 // add event listener for the button, for action "click"
 dongJoke.addEventListener("click", showDongJoke);
 function showDongJoke() {
-  $.getJSON( 'data\\ding_dong.json', function(dongData) {
+  $.getJSON( '..\\data\\ding_dong.json', function(dongData) {
     const randomDong = dongData[Math.floor(Math.random() * dongData.length)];
     if (!usedDongIDs.has(randomDong.id)) {
       usedDongIDs.add(randomDong.id);
