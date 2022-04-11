@@ -5,7 +5,7 @@ const knockJoke = document.getElementById("getKnock");
 // add event listener for the button, for action "click"
 knockJoke.addEventListener("click", showKnockJoke);
 function showKnockJoke() {
-  $.getJSON( '\\data\\knock_knock.json', function(knockData) {
+  $.getJSON( 'data\\knock_knock.json', function(knockData) {
     const randomKnock = knockData[Math.floor(Math.random() * knockData.length)];
     if (!usedKnockIDs.has(randomKnock.id)) {
       usedKnockIDs.add(randomKnock.id);
